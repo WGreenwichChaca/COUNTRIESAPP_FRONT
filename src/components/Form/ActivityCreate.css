@@ -1,0 +1,89 @@
+/* Reset de estilos */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Fondo de pantalla para toda la página */
+body {
+  background-size: cover;
+  background-position: center;
+}
+
+/* Contenedor principal centrado */
+.activity-create {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url('../../assets/turismo1.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(87, 85, 85, 0.8); /* Usé rgba para agregar transparencia al fondo */
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+.activity-create h1 {
+  color: #52eff7;
+  padding-bottom: 8px;
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  text-align: center; /* Centrar el texto dentro del contenedor */
+  background-color: #404040;
+}
+
+.activity-create form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.activity-create label {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #52eff7;
+  background-color: #404040;
+  padding: 10px;
+  border-radius: 8px; /* Bordes redondeados */
+  margin-bottom: 8px;
+}
+
+.activity-create input,
+.activity-create select {
+  margin-bottom: 16px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.activity-create button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  margin: 10px;
+  padding: 0.6em 1.2em;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.3s, color 0.2s;
+  background-color: #dead5d;
+}
+
+.activity-create button:hover {
+  border-color: #ce0b2e;
+  background-color: #de6d0b;
+  color: #fff;
+}
+
+.activity-create p.error {
+  color: #ff0000; /* Color rojo */
+  font-size: 16px; /* Tamaño de fuente más pequeño para los errores */
+  margin-top: -8px; /* Ajuste de margen superior para los errores */
+}
