@@ -4,7 +4,8 @@ import LandingPage from './components/Landing/LandingPage';
 import Home from './components/Home/Home';
 import ActivityCreate from './components/Form/ActivityCreate';
 import Detail from './components/Detail/Detail';
-
+import axios from 'axios';
+axios.defaults.baseURL = 'http://localhost:3001/'
 
 
 function App() {

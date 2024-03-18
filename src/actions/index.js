@@ -12,7 +12,7 @@ const GET_DETAIL = 'GET_DETAIL';
 const getCountries = () => {
   return async function (dispatch) {
     try {
-      const responseFromDb = await axios.get('http://localhost:3001/countries/');
+      const responseFromDb = await axios.get('/countries/');
       const countries = responseFromDb.data; // Extraer la propiedad 'data'
 
       dispatch({
@@ -28,7 +28,7 @@ const getCountries = () => {
 const getNameCountries = (name) => {
   return async function (dispatch) {
     try {
-      const responseFromDb = await axios.get('http://localhost:3001/countries/name?name=' + name);
+      const responseFromDb = await axios.get('/countries/name?name=' + name);
       return dispatch ({
         type: GET_NAME_COUNTRIES,
         payload: responseFromDb.data
@@ -64,7 +64,7 @@ const filterByContinent = (payload) => {
 const postActivity = (payload) => {
   return async function (dispatch) {
     try {
-      const response = await axios.post('http://localhost:3001/activities', payload);
+      const response = await axios.post('/activities', payload);
       console.log(response);
       return dispatch({
         type: POST_ACTIVITY,
@@ -80,7 +80,7 @@ const postActivity = (payload) => {
 const getActivities = () => {
   return async function (dispatch) {
     try {
-      const response = await axios.get('http://localhost:3001/activities');
+      const response = await axios.get('/activities');
       dispatch({
         type: GET_ACTIVITIES,
         payload: response.data,
@@ -93,7 +93,7 @@ const getActivities = () => {
 
 const getDetail = (id) => {
   return async function (dispatch) {
-      const responseDetail = await axios.get(`http://localhost:3001/countries/${id}`);
+      const responseDetail = await axios.get(`/countries/${id}`);
 
         return dispatch({
           type: GET_DETAIL,
